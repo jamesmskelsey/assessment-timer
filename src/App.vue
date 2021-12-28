@@ -3,7 +3,7 @@
     <b-container>
       <b-row>
         <b-col cols="4">
-          <timer />
+          <timer :time="totalTime" />
           <input-board :handleSave="handleSaveTimeChunks" />
         </b-col>
         <b-col cols="8">
@@ -26,18 +26,29 @@ export default {
     InputBoard,
     MainDisplay,
   },
-  data: function() {
-      return {
-          timeChunks: [],
-          totalTime: 0
-      }
+  data: function () {
+    return {
+      timeChunks: [],
+      totalTime: 236,
+    };
   },
   methods: {
-      handleSaveTimeChunks: function (leadTime, numTasks, finalReviewTime, totalTime) {
-          console.log("let's saving the data", leadTime, numTasks, finalReviewTime, totalTime)
-          this.totalTime = totalTime
-      }
-  }
+    handleSaveTimeChunks: function (
+      leadTime,
+      numTasks,
+      finalReviewTime,
+      totalTime
+    ) {
+      console.log(
+        "let's saving the data",
+        leadTime,
+        numTasks,
+        finalReviewTime,
+        totalTime
+      );
+      this.totalTime = totalTime;
+    },
+  },
 };
 </script>
 
