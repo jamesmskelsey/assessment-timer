@@ -18,7 +18,7 @@
     </b-form-group>
     <button
       @click="
-        () => handleSave(leadTime, numberOfTasks, finalReviewTime, totalTime)
+        () => handleSave(Number(leadTime), Number(numberOfTasks), Number(finalReviewTime), Number(totalTime))
       "
       class="btn btn-primary btn-block"
     >

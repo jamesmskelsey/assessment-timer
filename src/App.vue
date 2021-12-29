@@ -29,7 +29,7 @@ export default {
   data: function () {
     return {
       timeChunks: [],
-      totalTime: 236,
+      totalTime: 0,
     };
   },
   methods: {
