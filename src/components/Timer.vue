@@ -22,7 +22,7 @@ export default {
   components: {},
   data: function () {
     return {
-      seconds: 0,
+      seconds: 14400,
       timer: null,
       timerStarted: false,
     };
@@ -59,7 +59,10 @@ export default {
     },
   },
   props: {
-    time: Number,
+    time: {
+        type: Number,
+        default: 14400
+    },
   },
   watch: {
     time: function (newTime) {

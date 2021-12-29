@@ -29,7 +29,7 @@ export default {
   data: function () {
     return {
       timeChunks: [],
-      totalTime: 0,
+      totalTime: 240,
     };
   },
   methods: {
@@ -46,6 +46,7 @@ export default {
         finalReviewTime,
         totalTime
       );
+      // When the data comes back from the input board, we'll set the 
       this.totalTime = totalTime;
     },
   },
