@@ -30,7 +30,14 @@ export default {
   methods: {
     startTimer: function () {
       this.timerStarted = true;
-      this.timer = window.setInterval(() => (this.seconds -= 1), 1000);
+      this.timer = window.setInterval(() => {
+        // Clear the timer when the countdown hits zero.
+        if (this.seconds > 0) {
+          this.seconds -= 1;
+        } else {
+          this.stopTimer()
+        }
+      }, 1000);
     },
     stopTimer: function () {
       this.timerStarted = false;
